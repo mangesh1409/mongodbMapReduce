@@ -1,0 +1,3 @@
+db.contacts.aggregate([
+{$match : {gender : "male"}},
+{$group : {_id: {state : "$location.state"} , total_males : {$sum : 1} }} ])
